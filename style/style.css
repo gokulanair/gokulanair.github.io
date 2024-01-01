@@ -58,7 +58,7 @@ li {
     display: inline-block;
     color: var(--white);
     font-size: 3rem;
-    margin: 0.95rem 0;
+    margin: 1.5rem 0;
 }
 /* hamburger icon */
 .nav-toggle {
@@ -155,7 +155,7 @@ li {
     border-radius: 1.4rem;
 }
 .nav-links a:hover,
- .nav-links a:focus {
+.nav-links a:focus {
     background: rgba(255, 0, 0, 0.2);
 }
 /* profile area */
@@ -280,7 +280,7 @@ li {
     opacity: 0%;
 }
 /* footer */
-.footer {
+#footer {
     grid-area: footer;
     background: var(--primary);
     position: relative;
@@ -292,21 +292,23 @@ li {
     font-size: 2rem;
     color: var(--white);
 }
-.footer-items li {
+.footer-items a {
+    display: flex;
     width: 3.5rem;
     height: 3.5rem;
     background: var(--white);
     border-radius: 3.5rem;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 1.75rem 0;
     overflow: hidden;
     position: relative;
-    transition: width 400ms ease-out;
+    transition: width 350ms ease-out;
 }
-.footer-items li:hover {
-    width: 100%;
+
+.footer-items a:hover {
+    width: 50%;
     -webkit-tap-highlight-color: transparent;
 }
-.footer-items li a {
+.footer-items a span {
     display: block;
     width: 3.5rem;
     height: 3.5rem;
@@ -319,13 +321,14 @@ li {
     border-radius: 3.5rem;
     position: relative;
 }
-.footer-items li a:hover {
+.footer-items a:hover span,
+.footer-items a span:hover {
     color: var(--white);
     background: var(--primary);
 }
 .footer-items h4 {
     position: absolute;
-    top: 0.8rem;
+    top: 1rem;
     left: 5rem;
     font-size: 1.35rem;
     color: var(--primary);
@@ -366,9 +369,6 @@ li {
                              "section section"
                              "footer footer";
     }
-    .logo {
-        margin-left: 5rem;
-    }
     .nav-toggle,
     .hamburger {
         display: none;
@@ -381,7 +381,7 @@ li {
     }
     .nav-links ul {
         width: 20rem;
-        margin: 2.15rem 0;
+        margin: 2.4rem 0;
         position: absolute;
         right: 5rem;
     }
@@ -391,7 +391,7 @@ li {
     }
     .nav-links a::after {
         position: absolute;
-        top: 1.97rem;
+        top: 1.7rem;
         left: 0;
         content: '';
         background: var(--white);
@@ -420,12 +420,16 @@ li {
         height: 3.5rem;
         text-align: center;
     }
-    .footer-items li {
+    .footer-items a {
         display: inline-block;
-        margin: auto 0;
+        margin: auto 0 auto 0.5rem;
     }
-    .footer-items li:hover {
-        width: 72%;
+    .footer-items a:hover {
+        width: 50%;
+    }
+    .footer-items a:hover span {
+        color: var(--white);
+        background: var(--primary);
     }
     .arrow {
         top: -4.8rem;
